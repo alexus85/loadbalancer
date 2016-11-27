@@ -8,7 +8,7 @@ var os = require('os');
 var CLOSE_TIMEOUT = 10000;
 
 if (cluster.isMaster) {
-  var configFilePath = argv.config || path.resolve('config.json');
+  var configFilePath = argv.conf || path.resolve('config.json');
   if (!fs.existsSync(configFilePath)) {
     throw new Error('Could not find a config file at path: ' + configFilePath);
   }
